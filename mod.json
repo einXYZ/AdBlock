@@ -10,7 +10,7 @@
 	"name": "AdBlock",
 	"version": "v1.0.0",
 	"developer": "FullSound",
-	"description": "Warns player when from levels containing ads",
+	"description": "Warns player from levels containing ads",
 	"resources": {
         "spritesheets": {
             "AdBlock": [
