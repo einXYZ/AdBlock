@@ -8,7 +8,7 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(AdBlock VERSION 1.0.0)
+project(AdBlock VERSION 1.0.1)
 
 file(GLOB_RECURSE SOURCES
 	src/*.cpp
@@ -28,4 +28,4 @@ endif()
 
 add_subdirectory($ENV{GEODE_SDK} $ENV{GEODE_SDK}/build)
 
-setup_geode_mod(${PROJECT_NAME} EXTERNALS geode.node-ids:1.23.0)
+setup_geode_mod(${PROJECT_NAME})

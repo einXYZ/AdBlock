@@ -6,7 +6,7 @@ Get warned about ads inside a level before playing!
 - Shows a custom badge when browsing levels
 - Shows the badge when going on the level
 - Warning when playing the level first time
-![AdBlock Badge](/resources/badge.png)
+![AdBlock Badge](fullsound.adblock/resources/badge.png)
 
 
 ## Note

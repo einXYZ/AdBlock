@@ -41,7 +41,7 @@ class $modify(LevelCell) {
         auto badge = CCSprite::createWithSpriteFrameName("badge.png"_spr);
         badge->setScale(1.0f);
         badge->setZOrder(5);
-        badge->setID("adblock-badge");
+        badge->setID("adblock-badge"_spr);
         badge->setVisible(isAdLevel(m_level->m_levelID));
         badge->setAnchorPoint({ 0.f, 0.5f });
 
@@ -84,7 +84,7 @@ class $modify(LevelInfoLayer) {
         auto badge = CCSprite::createWithSpriteFrameName("badge.png"_spr);
         badge->setScale(1.f);
         badge->setZOrder(5);
-        badge->setID("adblock-badge");
+        badge->setID("adblock-badge"_spr);
         badge->setVisible(isAdLevel(m_level->m_levelID));
         badge->setAnchorPoint({ 0.f, 0.5f });
 
@@ -138,7 +138,7 @@ class $modify(LevelInfoLayer) {
     void onUpdate(CCObject* sender) {
         LevelInfoLayer::onUpdate(sender);
         fetchAdLevels([this]() {
-            if (auto badge = this->getChildByID("adblock-badge")) {
+            if (auto badge = this->getChildByID("adblock-badge"_spr)) {
                 badge->setVisible(isAdLevel(m_level->m_levelID));
             }
         });
@@ -156,7 +156,7 @@ static void fetchAdLevels(std::function<void()> onComplete) {
                 if (json.isArray()) {
                     s_adLevelIDs.clear();
                     for (auto& item : json.asArray().unwrap()) {
-                        s_adLevelIDs.push_back(static_cast<int>(item.asDouble().unwrap()));
+                        s_adLevelIDs.push_back(static_cast<int>(item.asDouble().unwrapOrDefault()));
                     }
                     Mod::get()->setSavedValue("ad-level-ids", s_adLevelIDs);
                     log::info("Fetched and saved {} IDs", s_adLevelIDs.size());
