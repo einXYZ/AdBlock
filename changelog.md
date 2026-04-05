@@ -1,3 +1,6 @@
+# v1.0.1
+- Minor code update
+
 # v1.0.0
 - AdBlock release!
 Features:
