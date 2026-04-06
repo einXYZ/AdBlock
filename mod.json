@@ -8,7 +8,7 @@
 	},
 	"id": "fullsound.adblock",
 	"name": "AdBlock",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "FullSound",
 	"description": "Warns player from levels containing ads",
 	"resources": {
@@ -26,5 +26,8 @@
 	"links": {
 		"source": "https://github.com/einXYZ/AdBlock",
 		"community": "https://discord.com/users/470965127231832064"
+	},
+	"dependencies": {
+		"geode.node-ids": ">=1.23.0"
 	}
 }

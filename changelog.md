@@ -1,3 +1,6 @@
+# v1.0.2
+- Added Node IDs dependency
+
 # v1.0.1
 - Minor code update
 
